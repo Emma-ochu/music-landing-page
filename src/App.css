@@ -1,0 +1,238 @@
+:root {
+  --bg-dark: #0f0f0f;
+  --bg-mid: #1a1a1a;
+  --bg-accent: #2b1a0f;
+
+  --text-main: #f5f5f5;
+  --text-soft: #bbb;
+
+  --gold: #ffcc70;
+  --gold-strong: #ffd700;
+
+  --shadow-gold: rgba(255, 200, 100, 0.25);
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* BODY */
+body::before {
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  background: url("./assets/logo.png") no-repeat center;
+  background-size: contain;
+  opacity: 0.05; /* very subtle */
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+/* CONTAINER */
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+  gap: 20px;
+}
+
+/* LOGO */
+.logo {
+  width: 100px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  mix-blend-mode: lighten;
+}
+
+/* COVER ART */
+.cover-art {
+  max-width: 420px;
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  box-shadow: 0 10px 30px var(--shadow-gold);
+  transition: transform 0.3s ease;
+}
+
+.cover-art :hover {
+  transform: scale(1.02);
+}
+
+/* TITLE */
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  background: linear-gradient(90deg, var(--gold-strong), var(--gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+
+/* TAGLINE */
+.tagline {
+  color: var(--text-soft);
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* COUNTDOWN */
+.countdown {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 25px 0;
+  color: var(--gold);
+}
+
+/* BUTTONS */
+.pre-save {
+  margin: 20px 0;
+}
+
+.button {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  transition: 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+/* PLATFORM COLORS */
+.spotify {
+  background: #1db954;
+}
+
+.apple {
+  background: #fa233b;
+}
+
+.youtube {
+  background: #ff0000;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* VIDEO */
+.teaser-video {
+  margin-top: 30px;
+}
+
+.video-player {
+  width: 200%;
+  max-width: 350px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px var(--shadow-gold);
+}
+
+/* NEWSLETTER */
+.newsletter {
+  margin-top: 30px;
+}
+
+.newsletter form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.newsletter input {
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+  width: 220px;
+}
+
+.newsletter button {
+  padding: 12px 20px;
+  border-radius: 5px;
+  border: none;
+  background: var(--gold);
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.newsletter button:hover {
+  opacity: 0.85;
+}
+.artist-name {
+  color: #ffcc70;
+  margin-bottom: 10px;
+}
+/* cta */
+.cta-text {
+  font-size: 18px;
+  font-weight: 500;
+  opacity: 0.85;
+}
+.spotify {
+  background: linear-gradient(135deg, #1db954, #1ed760);
+  transform: scale(1.05);
+}
+
+.countdown-container {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.count-box {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 15px 12px;
+  border-radius: 12px;
+  min-width: 70px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.count-box span {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffcc70;
+}
+
+.count-box small {
+  display: block;
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+/* media */
+@media (max-width:600px) {
+  .cover-art{
+    width: 90%;
+  }
+  .video-player{
+    height: 180px;
+  }
+  .title {
+    font-size: 22px;
+  }
+}
