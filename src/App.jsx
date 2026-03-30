@@ -45,7 +45,7 @@ function App() {
       {/* Title */}
       <h1 className="title">🔥 New Song Release: "Solo (Ambition) (Remix)"</h1>
       {/* Artist Name */}
-      <h2 className="artist-name">OMEGA ft ARES WB </h2>
+      <h2 className="artist-name">OMEGA B ft ARES WB </h2>
 
       <p className="tagline">
          Feel the vibe. Experience the sound Out soon.
